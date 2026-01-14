@@ -28,4 +28,4 @@ This project demonstrates the design and implementation of a secure and scalable
 * **[/Topology](https://github.com/uroojzaidi709/Enterprise-Network-GNS3/tree/main/Topology)**: Contains the `.gns3` project files. (Note: These are backend files that appear as raw text on GitHub).
 * **[/Screenshots](https://github.com/uroojzaidi709/Enterprise-Network-GNS3/tree/main/Screenshots)**: Visual verification including Topology, OSPF, and VPN (Phase 1, 2, 3) status.
 * **[/Config](https://github.com/uroojzaidi709/Enterprise-Network-GNS3/tree/main/Config)**: Running configurations for HQ, ISP, and Branch routers.
-* **[/Report](https://github.com/uroojzaidi709/Enterprise-Network-GNS3/tree/main/Report)**: Contains **CCN REPORT (2).pdf** with 51 implementation steps and test results.
+* **[/Report](https://github.com/uroojzaidi709/Enterprise-Network-GNS3/tree/main/Report)**: Contains **CCNL REPORT (1).pdf** with 51 implementation steps and test results.
