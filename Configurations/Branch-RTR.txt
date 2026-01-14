@@ -1,0 +1,49 @@
+hostname BRANCH-RTR
+
+! ---------- Inter-VLAN Routing ----------
+interface FastEthernet0/0
+ no shutdown
+
+interface FastEthernet0/0.30
+ encapsulation dot1Q 30
+ ip address 192.168.30.1 255.255.255.0
+
+interface FastEthernet0/0.40
+ encapsulation dot1Q 40
+ ip address 192.168.40.1 255.255.255.0
+
+! ---------- WAN ----------
+interface Serial0/0
+ ip address 10.0.0.2 255.255.255.252
+ no shutdown
+
+! ---------- OSPF ----------
+router ospf 1
+ network 192.168.30.0 0.0.0.255 area 0
+ network 192.168.40.0 0.0.0.255 area 0
+ network 10.0.0.0 0.0.0.3 area 0
+
+! ---------- ISAKMP Phase 1 ----------
+crypto isakmp policy 10
+ encryption aes
+ hash sha
+ authentication pre-share
+ group 2
+ lifetime 86400
+
+crypto isakmp key ccnl123 address 10.0.0.1
+
+! ---------- IPsec Phase 2 ----------
+crypto ipsec transform-set TS esp-aes esp-sha-hmac
+ mode tunnel
+
+access-list 110 permit ip 192.168.30.0 0.0.0.255 192.168.10.0 0.0.0.255
+access-list 110 permit ip 192.168.40.0 0.0.0.255 192.168.20.0 0.0.0.255
+
+crypto map VPN-MAP 10 ipsec-isakmp
+ set peer 10.0.0.1
+ set transform-set TS
+ match address 110
+
+interface Serial0/0
+ crypto map VPN-MAP
