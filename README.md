@@ -25,12 +25,7 @@ This project demonstrates the design and implementation of a secure and scalable
 | 40 | Finance | 192.168.40.0/24 |
 
 ## 📁 Repository Structure
-* **[/Topology](https://github.com/uroojzaidi709/Enterprise-Network-GNS3/tree/main/Topology)**: Contains the `.gns3` project files. 
-    *(Note: These are backend XML/JSON files used by GNS3 to reconstruct the network; they appear as raw text on GitHub.*
-* **[/Screenshots](https://github.com/uroojzaidi709/Enterprise-Network-GNS3/tree/main/Screenshots)**: Visual verification of the project, including:
-    * Network Topology Diagram
-    * OSPF Neighbor Adjacency
-    * VPN Tunnel Status (Phase 1, Phase 2 & Phase 3)
-* **[/Config](https://github.com/uroojzaidi709/Enterprise-Network-GNS3/tree/main/Config)**: Running configurations extracted from HQ, ISP, and Branch routers.
-* **[/Report](https://github.com/uroojzaidi709/Enterprise-Network-GNS3/tree/main/Report)**: Contains the file **CCN REPORT (2).pdf**. 
-    * This document includes all 51 implementation steps, detailed explanations, and full connectivity test results.
+* **[/Topology](https://github.com/uroojzaidi709/Enterprise-Network-GNS3/tree/main/Topology)**: Contains the `.gns3` project files. (Note: These are backend files that appear as raw text on GitHub).
+* **[/Screenshots](https://github.com/uroojzaidi709/Enterprise-Network-GNS3/tree/main/Screenshots)**: Visual verification including Topology, OSPF, and VPN (Phase 1, 2, 3) status.
+* **[/Config](https://github.com/uroojzaidi709/Enterprise-Network-GNS3/tree/main/Config)**: Running configurations for HQ, ISP, and Branch routers.
+* **[/Report](https://github.com/uroojzaidi709/Enterprise-Network-GNS3/tree/main/Report)**: Contains **CCN REPORT (2).pdf** with 51 implementation steps and test results.
